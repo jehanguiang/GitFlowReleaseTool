@@ -76,7 +76,7 @@
 				<configuration>
 					<sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
 					<outputDirectory>${basedir}/src/main/java/com/jehang/gitflowHelper</outputDirectory>
-					<targetPackage>com.jehang.gitflowHelper.Model</targetPackage>
+					<targetPackage>com.jehang.gitflowHelper.Models</targetPackage>
 					<useCommonsLang3>true</useCommonsLang3>
 				</configuration>
 				<executions>

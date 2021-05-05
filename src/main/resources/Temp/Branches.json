@@ -1,0 +1,795 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "pagelen": {
+      "type": "integer"
+    },
+    "values": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "commits": {
+                  "type": "object",
+                  "properties": {
+                    "href": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "href"
+                  ]
+                },
+                "self": {
+                  "type": "object",
+                  "properties": {
+                    "href": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "href"
+                  ]
+                },
+                "html": {
+                  "type": "object",
+                  "properties": {
+                    "href": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "href"
+                  ]
+                }
+              },
+              "required": [
+                "commits",
+                "self",
+                "html"
+              ]
+            },
+            "default_merge_strategy": {
+              "type": "string"
+            },
+            "merge_strategies": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "type": {
+              "type": "string"
+            },
+            "target": {
+              "type": "object",
+              "properties": {
+                "hash": {
+                  "type": "string"
+                },
+                "repository": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "object",
+                      "properties": {
+                        "self": {
+                          "type": "object",
+                          "properties": {
+                            "href": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "href"
+                          ]
+                        },
+                        "html": {
+                          "type": "object",
+                          "properties": {
+                            "href": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "href"
+                          ]
+                        },
+                        "avatar": {
+                          "type": "object",
+                          "properties": {
+                            "href": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "href"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "self",
+                        "html",
+                        "avatar"
+                      ]
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    },
+                    "uuid": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "links",
+                    "type",
+                    "name",
+                    "full_name",
+                    "uuid"
+                  ]
+                },
+                "links": {
+                  "type": "object",
+                  "properties": {
+                    "self": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "comments": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "patch": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "html": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "diff": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "approve": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "statuses": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "self",
+                    "comments",
+                    "patch",
+                    "html",
+                    "diff",
+                    "approve",
+                    "statuses"
+                  ]
+                },
+                "author": {
+                  "type": "object",
+                  "properties": {
+                    "raw": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "raw",
+                    "type"
+                  ]
+                },
+                "parents": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "hash": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "links": {
+                          "type": "object",
+                          "properties": {
+                            "self": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            },
+                            "html": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "self",
+                            "html"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "hash",
+                        "type",
+                        "links"
+                      ]
+                    }
+                  ]
+                },
+                "date": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "hash",
+                "repository",
+                "links",
+                "author",
+                "parents",
+                "date",
+                "message",
+                "type"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "links",
+            "default_merge_strategy",
+            "merge_strategies",
+            "type",
+            "target"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "links": {
+              "type": "object",
+              "properties": {
+                "commits": {
+                  "type": "object",
+                  "properties": {
+                    "href": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "href"
+                  ]
+                },
+                "self": {
+                  "type": "object",
+                  "properties": {
+                    "href": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "href"
+                  ]
+                },
+                "html": {
+                  "type": "object",
+                  "properties": {
+                    "href": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "href"
+                  ]
+                }
+              },
+              "required": [
+                "commits",
+                "self",
+                "html"
+              ]
+            },
+            "default_merge_strategy": {
+              "type": "string"
+            },
+            "merge_strategies": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "type": {
+              "type": "string"
+            },
+            "target": {
+              "type": "object",
+              "properties": {
+                "hash": {
+                  "type": "string"
+                },
+                "repository": {
+                  "type": "object",
+                  "properties": {
+                    "links": {
+                      "type": "object",
+                      "properties": {
+                        "self": {
+                          "type": "object",
+                          "properties": {
+                            "href": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "href"
+                          ]
+                        },
+                        "html": {
+                          "type": "object",
+                          "properties": {
+                            "href": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "href"
+                          ]
+                        },
+                        "avatar": {
+                          "type": "object",
+                          "properties": {
+                            "href": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "href"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "self",
+                        "html",
+                        "avatar"
+                      ]
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    },
+                    "uuid": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "links",
+                    "type",
+                    "name",
+                    "full_name",
+                    "uuid"
+                  ]
+                },
+                "links": {
+                  "type": "object",
+                  "properties": {
+                    "self": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "comments": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "html": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "diff": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "approve": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    },
+                    "statuses": {
+                      "type": "object",
+                      "properties": {
+                        "href": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "href"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "self",
+                    "comments",
+                    "html",
+                    "diff",
+                    "approve",
+                    "statuses"
+                  ]
+                },
+                "author": {
+                  "type": "object",
+                  "properties": {
+                    "raw": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "display_name": {
+                          "type": "string"
+                        },
+                        "uuid": {
+                          "type": "string"
+                        },
+                        "links": {
+                          "type": "object",
+                          "properties": {
+                            "self": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            },
+                            "html": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            },
+                            "avatar": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "self",
+                            "html",
+                            "avatar"
+                          ]
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "nickname": {
+                          "type": "string"
+                        },
+                        "account_id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "display_name",
+                        "uuid",
+                        "links",
+                        "type",
+                        "nickname",
+                        "account_id"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "raw",
+                    "type",
+                    "user"
+                  ]
+                },
+                "parents": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "hash": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "links": {
+                          "type": "object",
+                          "properties": {
+                            "self": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            },
+                            "html": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "self",
+                            "html"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "hash",
+                        "type",
+                        "links"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "hash": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "links": {
+                          "type": "object",
+                          "properties": {
+                            "self": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            },
+                            "html": {
+                              "type": "object",
+                              "properties": {
+                                "href": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "href"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "self",
+                            "html"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "hash",
+                        "type",
+                        "links"
+                      ]
+                    }
+                  ]
+                },
+                "date": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "hash",
+                "repository",
+                "links",
+                "author",
+                "parents",
+                "date",
+                "message",
+                "type"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "links",
+            "default_merge_strategy",
+            "merge_strategies",
+            "type",
+            "target"
+          ]
+        }
+      ]
+    },
+    "page": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "pagelen",
+    "values",
+    "page",
+    "size"
+  ]
+}
