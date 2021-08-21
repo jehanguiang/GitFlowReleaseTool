@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jehang.gitflowHelper.Models.Branches.Branches;
 import com.jehang.gitflowHelper.Models.Commits.RepositoryInfo;
 import com.jehang.gitflowHelper.Models.Commits.RepositoryValues;
+import com.jehang.gitflowHelper.Utility.UriGenerator;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -20,11 +21,15 @@ public class Branch {
     private final ObjectMapper objectMapper = new ObjectMapper();
     private String workspace, repo;
 
+    private UriGenerator uriGenerator;
+
     private Branch() {}
 
     public Branch(String workspace, String repo) {
         this.workspace = workspace;
         this.repo = repo;
+
+        this.uriGenerator = new UriGenerator(this.workspace).withRepo(this.repo);
     }
 
     public List<String> getBranches() {
